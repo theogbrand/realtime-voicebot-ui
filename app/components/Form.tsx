@@ -92,7 +92,7 @@ export default function Form() {
               htmlFor="roomName"
               className="block text-sm font-medium text-gray-700"
             >
-              Room Name
+              Your Name:
             </label>
             <input
               type="text"
@@ -120,7 +120,7 @@ export default function Form() {
         {chatroomUrl && (
           <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
             <p className="text-sm text-green-800">
-              Chatroom URL:{" "}
+              Join this chatroom to talk to SEALION:{" "}
               <a href={chatroomUrl} className="underline">
                 {chatroomUrl}
               </a>
