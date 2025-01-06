@@ -77,6 +77,7 @@ export default function Form() {
         setChatroomUrl(data.chatroomUrl);
       }
     } catch (err) {
+      console.log("err", err);
       setError("An unexpected error occurred");
     } finally {
       setLoading(false);

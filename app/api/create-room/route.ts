@@ -4,7 +4,7 @@ export async function POST(request: Request) {
   const { ROOM_NAME } = await request.json();
   console.log("ROOM_NAME sent to server", ROOM_NAME);
   const EXTERNAL_API_ENDPOINT = process.env.EXTERNAL_API_ENDPOINT;
-  const API_KEY = process.env.API_KEY;
+  // const API_KEY = process.env.API_KEY;
 
   try {
     const externalResponse = await fetch(EXTERNAL_API_ENDPOINT!, {
@@ -27,6 +27,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ chatroomUrl });
   } catch (error) {
+    console.log("error calling external api", error);
     return NextResponse.json({ error: 'Failed to create chatroom' }, { status: 500 });
   }
 }
